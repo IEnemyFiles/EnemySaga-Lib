@@ -1,41 +1,41 @@
-local Library = loadstring(game:HttpGet("https://bitbucket.org/cat__/turtle-ui/raw/main/Module"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/IEnemyFiles/EnemySaga-Lib/main/EnemyLib2.lua"))()
 
-local Main = Library:Window("Main")
-local Settings = Library:Window("Settings")
+local EnemySaga = Library:Window("Main")
+local EnemySaga2 = Library:Window("Settings")
 
-Main:Label("Label")
+EnemySaga:Label("Credit By : -E-#4990")
 
-Main:Button("Button", function(Func)
+EnemySaga:Button("Button", function(Func)
     print("This is a button")
 end)
 
-Main:Toggle("Toggle", false, function(State, Func)
+EnemySaga:Toggle("Toggle", false, function(State, Func)
     print("Toggle:", State)
     Func:SetText(State and "Toggle Enabled" or "Toggle Disabled")
 end, false)
 
-Main:Slider("Slider", 1, 100, 50, function(Value, Func)
+EnemySaga:Slider("Slider", 1, 100, 50, function(Value, Func)
     print("Slider:", Value)
 end)
 
-Main:Box("Box", "", "Default", function(Text, Focused, Func)
+EnemySaga:Box("Box", "", "Default", function(Text, Focused, Func)
     if Focused then
         print(Text)
     end
 end)
 
-Main:Dropdown("Dropdown", {"A", "B", "C"}, function(Selected)
+EnemySaga:Dropdown("Dropdown", {"A", "B", "C"}, function(Selected)
     print("Dropdown:", Selected)
 end, true)
 
-Main:ColorPicker("ColorPicker", Color3.fromRGB(255, 255, 255), function(Color, Func)
+EnemySaga:ColorPicker("ColorPicker", Color3.fromRGB(255, 255, 255), function(Color, Func)
     print("ColorPicker:", Color)
 end)
 
-Main:Bind("Bind", Enum.KeyCode.F, false, function(State, Func)
+EnemySaga:Bind("Bind", Enum.KeyCode.F, false, function(State, Func)
     print("Bind:", State)
 end)
 
-Settings:HideUI()
-Settings:MinimiseWindows()
-Settings:DestroyUI()
+EnemySaga2:HideUI()
+EnemySaga2:MinimiseWindows()
+EnemySaga2:DestroyUI()
